@@ -1,5 +1,7 @@
 async function makeAjaxCall() {
-  let url = "https://jsonplaceholder.typicode.com/posts/1";
+  let postTag = document.querySelector("#postid");
+  let postid = postTag.value;
+  let url = `https://jsonplaceholder.typicode.com/posts/${postid}`;
 
   // 1. AJAX CALL
   let result = await fetch(url);
